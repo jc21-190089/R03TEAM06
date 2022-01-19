@@ -41,7 +41,7 @@ public class delete extends HttpServlet {
 			st.executeUpdate();
 			st.close();
 			con.close();
-			response.sendRedirect("http://localhost:8080/XAMARIN/kaimono");
+			response.sendRedirect("http://localhost:8080/R03Team06/kaimono");
 
 			} catch (Exception e) {
 				out.println("<pre>");

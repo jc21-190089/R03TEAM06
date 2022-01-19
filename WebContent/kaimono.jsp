@@ -72,7 +72,7 @@ if(optList2.isPresent()){
 </table>
 </form>
 
-<a href="http://localhost:8080/XAMARIN/list">リスト画面</a>
+<a href="http://localhost:8080/R03Team06/list">リスト画面</a>
 
 
 
