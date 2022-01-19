@@ -10,15 +10,15 @@
 
 	<%--↓ハンバーガ目メニュー↓ --%>
 	<div class="ham">
-		<span class="nav_toggle">
+		<div class="nav_toggle">
   			<i></i>
   			<i></i>
   			<i></i>
-		</span>
+		</div>
 		<nav class="nav">
   			<ul class="nav_menu_ul">
     			<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/list">リスト画面</a></li>
-    			<li class="nav_menu_li"><a href="#">ABOUT</a></li>
+	   			<li class="nav_menu_li"><a href="#">ABOUT</a></li>
     			<li class="nav_menu_li"><a href="#">BLOG</a></li>
     			<li class="nav_menu_li"><a href="#">CONTACT</a></li>
   			</ul>
