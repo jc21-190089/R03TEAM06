@@ -23,5 +23,7 @@ window.onload = function() {
 	reset.addEventListener('click', (event) => {
 		text.value = 0;
 	})
+	
+	
 
 }
