@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/list")
-public class listServlet extends HttpServlet {
+@WebServlet("/kaimono")
+public class kaimonolist extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,12 +28,12 @@ public class listServlet extends HttpServlet {
 			Connection connection=DriverManager.getConnection(url,id,pass);
 			PreparedStatement st =
 					connection.prepareStatement(
-							"select * from comm_table where sort_id=1"
+							"select * from comm_table where sort_id=1 and add_id=2"
 						);
 			
 			PreparedStatement at =
 					connection.prepareStatement(
-							"select * from comm_table where sort_id=2"
+							"select * from comm_table where sort_id=2 and add_id=2"
 						);
 			
 			ResultSet result1 = st.executeQuery();
@@ -66,7 +66,7 @@ public class listServlet extends HttpServlet {
 			
 			request.setAttribute("list1",list1);
 			request.setAttribute("list2",list2);
-			request.getRequestDispatcher("/list.jsp")
+			request.getRequestDispatcher("/kaimono.jsp")
 			.forward(request,response);
 			
 		} catch (ClassNotFoundException e ) {
