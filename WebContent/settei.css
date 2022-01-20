@@ -1,20 +1,5 @@
 @charset "utf-8";
 
-.btn {
-  background-color: #000000;
-  color: white;
-  font-size: 18px;
-  padding: 10px 20px;
-}
-
-.btn:hover {
-  background-color: #dc143c;
-}
-
-input[type="radio"]:checked + label {
-  background-color: #ff0000;
-}
-
 input[type="radio"] {
   display: none;
 }
