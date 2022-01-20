@@ -9,6 +9,8 @@
 <meta charset="UTF-8">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+<link href="kaimono.css" rel="stylesheet" type="text/css">
+
 <title>kaimono</title>
 </head>
 <%
@@ -32,37 +34,37 @@ if(optList2.isPresent()){
 <table class="table">
   <thead> 
     <th>
-    結果
+    <div class="title">結果</div>
     </th>
   </thead>
   <tbody>
      <th>
-    食品
+   <div class="title"> 食品</div>
     <br>
-    名前
+    <div class="title">名前</div>
     </th>
     
    
   <% for (String[] s : list1){ %>
     <tr>
     <% String commid = s[0]; %>
-    <td><%=s[1] %></td>
-	<td><%=s[2] %><button type="submit"style="width: 50px; height: 30px;"value=<%=commid%> name="comm"><%=s[0] %></button></td>
-	<td><%=s[3] %></td>
+    <td><div class="namae"><%=s[1] %></div></td>
+	<td><button type="submit"style="width: 200px; height: 80px;"value=<%=commid%> name="comm"><div class="font">買い物済</div></button></td>
+	<td><div class="font2"><%=s[3] %></div></td>
 
     </tr>
     <%} %>
  
 
     <th>
-    日用品
+   <div class="title"> 日用品</div>
     </th>
       <% for (String[] s : list2){ %>
     <tr>
     <% String commid = s[0]; %>
-    <td><%=s[1] %></td>
-	<td><%=s[2] %><button type="submit"style="width: 50px; height: 30px;"value=<%=commid%> name="comm"><%=s[0] %></button></td>
-	<td><%=s[3] %></td>
+    <td><div class="namae"><%=s[1] %></div></td>
+	<td><button type="submit"style="width: 200px; height: 80px;"value=<%=commid%> name="comm"><div class="font">買い物済</div></button></td>
+	<td><div class="font2"><%=s[3] %></div></td>
 
     </tr>
     <%} %>
@@ -73,6 +75,8 @@ if(optList2.isPresent()){
 </form>
 
 <a href="http://localhost:8080/R03Team06/list">リスト画面</a>
+<a href="http://localhost:8080/R03Team06/tuika.jsp">商品追加画面</a>
+
 
 
 
