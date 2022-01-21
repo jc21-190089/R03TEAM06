@@ -3,11 +3,15 @@
 	background-color:lightblue;
 	font-size :  60px;
 	width :300px;
+	margin:0;
+	padding:0;
 }
 .kaimono{ 
 	background-color:#FFABCE;
 	font-size :  60px;
 	width :300px;
+	margin:0;
+	padding:0;
 }
 .title{
 	font-size : 80px;
