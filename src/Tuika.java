@@ -1,20 +1,24 @@
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import javax.naming.InitialContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import javax.sql.DataSource;
 
 //データベース追加用サーブレット　
 
 @WebServlet("/tuika")
+@MultipartConfig
 
 public class Tuika extends HttpServlet {
 	
@@ -34,6 +38,16 @@ public class Tuika extends HttpServlet {
 			String comm = request.getParameter("comm");
 			String count = request.getParameter("count");
 			
+			Part part=request.getPart("file");
+			//ファイル名を取得
+			//String filename=part.getSubmittedFileName();//ie対応が不要な場合
+			String filename=Paths.get(part.getSubmittedFileName()).getFileName().toString();
+			
+			
+			PreparedStatement at = con.prepareStatement(
+					"insert into file_table values(?)");
+			
+			at.setString(1,"filename");
 			
 			PreparedStatement st = con.prepareStatement(
 					"insert into comm_table values(null,1,?,?,?,?)");
