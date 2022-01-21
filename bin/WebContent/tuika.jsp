@@ -59,7 +59,7 @@
 				</script>
 				<label class="upload-label">
 					<div class="font">ファイルを選択</div>
-					<input type="file"  name="file" onchange="OnFileSelect( this );" required />
+					<input type="file" onchange="OnFileSelect( this );" required />
 				</label>
 				<ul id="ID001"></ul>
 			</div>

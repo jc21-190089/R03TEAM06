@@ -11,42 +11,8 @@
 
 <link href="list.css" rel="stylesheet" type="text/css">
 
-<title>list</title>
-	<%-- <script>
-		function getObj(name){
-			return document.getElementById(name);
-		}
-		
-		function plus(){
-			const obj = getObj("num");
-			let val = Number(obj.textContent)+1;
-			if(val>2){
-				val=2;
-			}
-			obj.textContent=val;
-			setColor(obj);
-		}
-		function minus(){
-			const obj = getObj("num");
-			let val = Number(obj.textContent)-1;
-			if(val<1){
-				val=1;
-			}
-			obj.textContent=val;
-			setColor(obj);
-		}
-		function setColor(obj){
-			const num = Number(obj.textContent);
-			let iro ="red";
-			if(num==1){
-				iro="blue";
-			}else if(num==2){
-				iro="red";
-			}
-			obj.style.color = iro;
-		}
-		
-	</script>--%>
+<title>一覧画面</title>
+
 </head>
 <%
 Optional<List<String[]>>optList1 = Optional.ofNullable((List<String[]>)request.getAttribute("list1"));
@@ -76,19 +42,16 @@ if(optList4.isPresent()){
 	list4 = optList4.get();
 }
 %>
-
+<script src="list.js"></script>
 <body>
 
-<%-- <p>
-<button type="button" onclick="plus();">+</button>
-<button type="button" onclick="minus();">-</button>
-</p>--%>
+
 <form method="post" action="add">
 <table class="table">
   <thead> 
-    <th>
+   <th> 
     <div class="title">結果</div>
-    </th>
+   </th>
   </thead>
   <tbody>
      <th>
@@ -103,9 +66,11 @@ if(optList4.isPresent()){
     <% String commid = s[0]; %>
     
     <td><div class="list"><%=s[1] %></div></td>
-	<td><button class="button" type="submit"value=<%=commid%> name="comm" ><div class="font">購入する</div></button></td>
-	<td><input type="text" value=<%=s[3] %> id="textbox" name="count"
-					style="width: 100px; height: 80px;"></div></td>
+	<td><button class="button" type="submit"value=<%=s[0]%> name="comm" ><div class="font">購入する</div></button></td>
+	
+	<td><button class="button" type="button" id="down"><div class="font">－</div></button></td>
+	<td><input class="count" type="text" value=<%=s[3] %> id="textbox" name="count"></td>
+	<td><button class="button" type="button" id="up" ><div class="font">＋</div></button></td>
 
 
     </tr>
@@ -116,7 +81,11 @@ if(optList4.isPresent()){
     
     <td><div class="kaimono"><%=s[1] %></div></td>
 	<td><div class="font2">登録済み</div></td>
-	<td><div class="font"><%=s[3] %></div></td>
+	<td><button class="button" type="button" id="down"><div class="font">－</div></button></td>
+	<td><input class="count" type="text" value=<%=s[3] %> id="textbox" name="count"></td>
+	<td><button class="button" type="button" id="up" ><div class="font">＋</div></button></td>
+			
+
 
 
     </tr>
@@ -134,8 +103,10 @@ if(optList4.isPresent()){
     <% String commid = s[0]; %>
     
     <td><div class="list"><%=s[1] %></div></td>
-	<td><button class="button" type="submit"value=<%=commid%> name="comm" ><div class="font">購入する</div></button></td>
-	<td><div class="font"><%=s[3] %></div></td>
+	<td><button class="button" type="submit"value=<%=s[0]%> name="comm" ><div class="font">購入する</div></button></td>
+	<td><button class="button" type="button" id="down"><div class="font">－</div></button></td>
+	<td><input class="count" type="text" value=<%=s[3] %> id="textbox" name="count"></td>
+	<td><button class="button" type="button" id="up" ><div class="font">＋</div></button></td>
 
 
     </tr>
@@ -146,7 +117,9 @@ if(optList4.isPresent()){
     
     <td><div class="kaimono"><%=s[1] %></div></td>
 	<td><div class="font2">登録済み</div></td>
-	<td><div class="font"><%=s[3] %></div></td>
+	<td><button class="button" type="button" id="down"><div class="font">－</div></button></td>
+	<td><input class="count" type="text" value=<%=s[3] %> id="textbox" name="count"></td>
+	<td><button class="button" type="button" id="up" ><div class="font">＋</div></button></td>
 
 
     </tr>
@@ -155,6 +128,10 @@ if(optList4.isPresent()){
   </tbody>
 </table>
 </form>
+
+
+
+			
 <a href="http://localhost:8080/R03Team06/kaimono">買い物画面</a>
 <a href="http://localhost:8080/R03Team06/tuika.jsp">商品追加画面</a>
 </body>
