@@ -3,7 +3,6 @@ window.onload = function() {
 	const downbutton = document.getElementById('down');
 	const upbutton = document.getElementById('up');
 	const text = document.getElementById('textbox');
-	const reset = document.getElementById('reset');
 
 	//ボタンが押されたらカウント減
 	downbutton.addEventListener('click', (event) => {
@@ -19,10 +18,7 @@ window.onload = function() {
 		text.value++;
 	})
 
-	//ボタンが押されたら0に戻る
-	reset.addEventListener('click', (event) => {
-		text.value = 0;
-	})
 	
 	
+
 }
