@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script>
+		function getObj(name){
+			return document.getElementById(name);
+		}
+		
+		function plus(){
+			const obj = getObj("num");
+			let val = Number(obj.textContent)+1;
+			if(val>3){
+				val=3;
+			}
+			obj.textContent=val;
+			setColor(obj);
+		}
+		function minus(){
+			const obj = getObj("num");
+			let val = Number(obj.textContent)-1;
+			if(val<1){
+				val=1;
+			}
+			obj.textContent=val;
+			setColor(obj);
+		}
+		function setColor(obj){
+			const num = Number(obj.textContent);
+			let iro ="black";
+			if(num==1){
+				iro="red";
+			}else if(num==2){
+				iro="blue";
+			}else if(num==3){
+				iro="green";
+			}
+			obj.style.color = iro;
+		}
+		
+	</script>
+</head>
+<body>
+<p>
+<span id="num">1</span>
+<button type="button" onclick="plus();">+</button>
+<button type="button" onclick="minus();">-</button>
+</p>
+
+</body>
+</html>
