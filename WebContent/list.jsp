@@ -104,7 +104,8 @@ if(optList4.isPresent()){
     
     <td><div class="list"><%=s[1] %></div></td>
 	<td><button type="submit"style="width: 200px; height: 80px;"value=<%=commid%> name="comm" ><div class="font">購入する</div></button></td>
-	<td><div class="font"><%=s[3] %></div></td>
+	<td><input type="text" value=<%=s[3] %> id="textbox" name="count"
+					style="width: 100px; height: 80px;"></div></td>
 
 
     </tr>
