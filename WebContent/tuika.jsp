@@ -3,12 +3,12 @@
 <!doctype html>
 <html>
 <head>
-<link href="tuika.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width,intial-scale=1.0">
 <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script src="henkou.js"></script>
 <script src="tuika.js"></script>
 </head>
 <body>
-
 
 	<%--↓ハンバーガ目メニュー↓ --%>
 	<div class="ham">
@@ -27,13 +27,12 @@
 	<script>
 	    $('.nav_toggle').on('click', function () {
 	        $('.nav_toggle, .nav').toggleClass('show');
-	    });
+    	});
 	</script>
 	<%--↑↑↑↑↑↑↑↑↑ --%>
 
 	<div class="content">
 		<form method="post" action="tuika">
-
 			<%--↓画像はじめ↓ --%>
 			<div id="gazouwaku">
 				<script type="text/javascript">
@@ -66,15 +65,15 @@
 			<%--↑画像終わり↑--%>
 
 			<div class="font">
-				<label for="name">名前</label> <input type="text" name="name"
-					maxlength="10" style="width: 650px; height: 150px;"><br>
-				<br> <input type="text" value="0" id="textbox" name="count"
-					style="width: 650px; height: 150px;"><br> <br>
+				<label for="name">名前</label>
+				<input type="text" name="name"	maxlength="10" style="width: 650px; height: 150px;">
+				<br><br> 
+				<input type="text" value="0" id="textbox" name="count"style="width: 650px; height: 150px;">
+				<br> <br>
 				<div class="sentaku">
-					<label><input class="radio" type="radio" name="comm"
-						value="syoku" style="transform: scale(3.0)"> 食材</label>&emsp; <label><input
-						class="radio" type="radio" name="comm" value="niti"
-						style="transform: scale(3.0)">日用品 </label><br> <br>
+				<label><input class="radio" type="radio" name="comm"value="syoku" style="transform: scale(3.0)">食材 </label>&emsp; 
+				 <label><input class="radio" type="radio" name="comm" value="niti"style="transform: scale(3.0)">日用品 </label>
+				 <br> <br>
 				</div>
 			</div>
 			<br>
@@ -85,19 +84,16 @@
 
 		<%--プラス,マイナス,リセットボタン --%>
 		<div class="updown">
-			<button class="button " id="down"
-				style="width: 150px; height: 150px;">
+			<button class="button " id="down"style="width: 150px; height: 150px;">
 				<div class="font">－</div>
 			</button>
 			<button class="button " id="up" style="width: 150px; height: 150px;">
 				<div class="font">＋</div>
 			</button>
-			<button class="button resetbtn " id="reset"
-				style="width: 300px; height: 150px;">
+			<button class="button resetbtn " id="reset"style="width: 300px; height: 150px;">
 				<div class="font">RESET</div>
 			</button>
 		</div>
 	</div>
-
 </body>
 </html>
