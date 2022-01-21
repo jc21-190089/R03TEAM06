@@ -5,8 +5,10 @@
 <head>
 <link href="tuika.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script src="tuika.js"></script>
 </head>
 <body>
+
 
 	<%--↓ハンバーガ目メニュー↓ --%>
 	<div class="ham">
@@ -94,7 +96,6 @@
 				style="width: 300px; height: 150px;">
 				<div class="font">RESET</div>
 			</button>
-			<script src="tuika.js"></script>
 		</div>
 	</div>
 
