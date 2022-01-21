@@ -24,6 +24,7 @@
 			</ul>
 		</nav>
 	</div>
+
 	<script>
 	    $('.nav_toggle').on('click', function () {
 	        $('.nav_toggle, .nav').toggleClass('show');
@@ -33,6 +34,9 @@
 
 	<div class="content">
 		<form method="post" action="tuika">
+		<!-- <table>
+		<tr>
+		<td> -->
 			<%--↓画像はじめ↓ --%>
 			<div id="gazouwaku">
 				<script type="text/javascript">
@@ -68,7 +72,11 @@
 			<div class="font">
 				<label for="name">名前</label>
 				<input type="text" name="name"	maxlength="10" style="width: 650px; height: 150px;">
-				<br><br> 
+			</div>
+		<!-- </td> -->
+		<br><br>
+		<!-- <td> -->		
+			<div class="font">
 				<input type="text" value="0" id="textbox" name="count"style="width: 650px; height: 150px;">
 				<br> <br>
 				<div class="sentaku">
@@ -81,6 +89,9 @@
 			<button type="submit" style="width: 250px; height: 150px;">
 				<div class="font">追加</div>
 			</button>
+			<!-- </td>
+			</tr>
+		</table> -->
 		</form>
 
 		<%--プラス,マイナス,リセットボタン --%>
