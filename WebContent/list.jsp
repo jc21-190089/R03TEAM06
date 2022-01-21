@@ -94,7 +94,7 @@ if(optList4.isPresent()){
      <th>
     <div class="title">食品</div>
     <br>
-    <div class="title">名前  </div>
+    <div class="title">名前</div>
     </th>
     
    
@@ -122,6 +122,7 @@ if(optList4.isPresent()){
     <%} %>
 
     <th>
+    
     <div class="title">日用品</div>
    
     <br>
