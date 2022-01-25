@@ -1,4 +1,19 @@
 @charset "UTF-8";
+
+.content {
+	text-align: center;
+}
+/*画像37-64*/
+#gazouwaku {
+	height: 350px;
+	margin-top: 100px;
+	margin-bottom: 250px;
+}
+
+.sizex {
+	width: auto;
+	height:250px;
+}
 /*ハンバーガー14-26*/
 .nav_toggle {
 	display: block;
@@ -59,19 +74,6 @@
 	opacity: 1;
 	visibility: visible;
 }
-
-/*画面*/
-.hidari{
-	display:flex;
-}
-
-/*画像37-64*/
-#gazouwaku {
-	height: 350px;
-	margin-top: 100px;
-	margin-bottom: 250px;
-}
-
 
 /*増減ボタン86-96*/
 
