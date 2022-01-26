@@ -73,6 +73,7 @@ input {
 	font-size: 0.95em; /* フォントサイズ */
 	border-radius: 2.5em; /* 角の丸み */
 	transition: 0.2s; /* ホバーをなめらかに */
+	
 }
 
 .upload-label input {
