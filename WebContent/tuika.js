@@ -24,5 +24,5 @@ window.onload = function() {
 		text.value = 0;
 	})
 	
-	
+1	
 }

@@ -20,8 +20,6 @@
 			<ul class="nav_menu_ul">
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/list">リスト画面</a></li>
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/kaimono">買い物画面</a></li>
-				<li class="nav_menu_li"><a href="#">BLOG</a></li>
-				<li class="nav_menu_li"><a href="#">CONTACT</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -67,7 +65,7 @@
 				<ul id="ID001"></ul>
 			</div>
 			<%--↑画像終わり↑--%>
-
+			
 			<div class="font">
 				<label for="name">名前</label>
 				<input type="text" name="name"	maxlength="10"   class="pcHako mbHako mar">
@@ -81,21 +79,21 @@
 				</div>
 			</div>
 			<br>
-			<button type="submit" class="mbTubo" >
+			<button type="submit" class="tubo" >
 				<div class="font">追加</div>
 			</button>
 			
 		</form>
 
 		<%--プラス,マイナス,リセットボタン --%>
-		<div class="updown">
-			<button class="button mbZoge" id="down">
+		<div class="updown ">
+			<button class="button zoge" id="down">
 				<div class="font">－</div>
 			</button>
-			<button class="button mbZoge" id="up" >
+			<button class="button zoge" id="up" >
 				<div class="font">＋</div>
 			</button>
-			<button class="button resetbtn mbRese" id="reset">
+			<button class="button resetbtn rese" id="reset">
 				<div class="font">RESET</div>
 			</button>
 		</div>
