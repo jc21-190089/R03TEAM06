@@ -20,6 +20,7 @@ for (let i=1;i<=100;i++){
 	textlist.push(text)
 }
 
+
 var downbutton =[];
 var upbutton=[];
 var text=[];
