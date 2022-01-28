@@ -13,11 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
-//データベース追加用サーブレット
 
-@WebServlet("/add")
+@WebServlet("/count")
 
-public class add extends HttpServlet {
+public class CountServlet extends HttpServlet {
 	
 	public void doPost(
 			HttpServletRequest request, HttpServletResponse response
@@ -30,14 +29,15 @@ public class add extends HttpServlet {
 			DataSource ds = (DataSource)ic.lookup(
 					"java:/comp/env/jdbc/webapp");
 			Connection con = ds.getConnection();
-			int comm = Integer.parseInt( request.getParameter("comm"));
+			int count = Integer.parseInt( request.getParameter("count"));
+			System.out.println(count);
 			
 			PreparedStatement st = con.prepareStatement(
 					"update comm_table set add_id=2 where comm_id=?");
 			st.setInt(1, comm);
 			
-			//int count = Integer.parseInt( request.getParameter("count"));
-			//System.out.println(count);
+			int count = Integer.parseInt( request.getParameter("count"));
+			System.out.println(count);
 			st.executeUpdate();
 			st.close();
 			con.close();

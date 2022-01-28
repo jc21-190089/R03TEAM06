@@ -11,42 +11,8 @@
 
 <link href="list.css" rel="stylesheet" type="text/css">
 
-<title>list</title>
-	<%-- <script>
-		function getObj(name){
-			return document.getElementById(name);
-		}
-		
-		function plus(){
-			const obj = getObj("num");
-			let val = Number(obj.textContent)+1;
-			if(val>2){
-				val=2;
-			}
-			obj.textContent=val;
-			setColor(obj);
-		}
-		function minus(){
-			const obj = getObj("num");
-			let val = Number(obj.textContent)-1;
-			if(val<1){
-				val=1;
-			}
-			obj.textContent=val;
-			setColor(obj);
-		}
-		function setColor(obj){
-			const num = Number(obj.textContent);
-			let iro ="red";
-			if(num==1){
-				iro="blue";
-			}else if(num==2){
-				iro="red";
-			}
-			obj.style.color = iro;
-		}
-		
-	</script>--%>
+<title>一覧画面</title>
+
 </head>
 <%
 Optional<List<String[]>>optList1 = Optional.ofNullable((List<String[]>)request.getAttribute("list1"));
@@ -76,35 +42,36 @@ if(optList4.isPresent()){
 	list4 = optList4.get();
 }
 %>
-
+<script src="list.js"></script>
 <body>
 
-<%-- <p>
-<button type="button" onclick="plus();">+</button>
-<button type="button" onclick="minus();">-</button>
-</p>--%>
+
 <form method="post" action="add">
 <table class="table">
-  <thead> 
-    <th>
-    <div class="title">結果</div>
-    </th>
-  </thead>
+
   <tbody>
-     <th>
+     
     <div class="title">食品</div>
     <br>
-    <div class="title">名前</div>
-    </th>
     
+    <td><div class="title hyou">名前</div></td>
+    <td><div class="title hyou">状態</div></td>
+    <td></td>
+    <td><div class="title hyou">個数</div></td>
+    
+
    
   <% for (String[] s : list1){ %>
     <tr>
-    <% String commid = s[0]; %>
-    
+       
     <td><div class="list"><%=s[1] %></div></td>
-	<td><button type="submit"style="width: 200px; height: 80px;"value=<%=commid%> name="comm" ><div class="font">購入する</div></button></td>
-	<td><div class="font"><%=s[3] %></div></td>
+	<td><button class="button" type="submit"value=<%=s[0]%> name="comm" ><div class="font">購入する</div></button></td>
+	 <% String down = "down"+s[0]; %>
+	 <% String text = "text"+s[0]; %>
+	 <% String up = "up"+s[0]; %>
+	 <td><a class="btn btn-border"id="<%=down %>" type="button"><span><div class="plmy">－</div></span></a></td>
+	<td><input class="count" type="text" value=<%=s[3] %> id="<%=text%>" name="count"></td>
+	<td><a class="btn btn-border"id="<%=up %>" type="button"><span><div class="plmy">＋</div></span></a></td>	
 
 
     </tr>
@@ -115,26 +82,36 @@ if(optList4.isPresent()){
     
     <td><div class="kaimono"><%=s[1] %></div></td>
 	<td><div class="font2">登録済み</div></td>
-	<td><div class="font"><%=s[3] %></div></td>
-
-
+	 <% String down = "down"+s[0]; %>
+	 <% String text = "text"+s[0]; %>
+	 <% String up = "up"+s[0]; %>
+	 <td><a class="btn btn-border"id="<%=down %>" type="button"><span><div class="plmy">－</div></span></a></td>
+	<td><input class="count" type="text" value=<%=s[3] %> id="<%=text%>" name="count"></td>
+	<td><a class="btn btn-border"id="<%=up %>" type="button"><span><div class="plmy">＋</div></span></a></td>	
     </tr>
     <%} %>
-
-    <th>
-    
+    </table>
+<table class="table">
+	
     <div class="title">日用品</div>
-   
     <br>
-    <div class="title">名前</div>
-    </th>
+    
+    <td><div class="title hyou">名前</div></td>
+    <td><div class="title hyou">状態</div></td>
+    <td></td>
+    <td><div class="title hyou">個数</div></td>>
+    
   <% for (String[] s : list3){ %>
     <tr>
-    <% String commid = s[0]; %>
     
     <td><div class="list"><%=s[1] %></div></td>
-	<td><button type="submit"style="width: 200px; height: 80px;"value=<%=commid%> name="comm" ><div class="font">購入する</div></button></td>
-	<td><div class="font"><%=s[3] %></div></td>
+	<td><button class="button" type="submit"value=<%=s[0]%> name="comm" ><div class="font">購入する</div></button></td>
+	 <% String down = "down"+s[0]; %>
+	 <% String text = "text"+s[0]; %>
+	 <% String up = "up"+s[0]; %>
+	 <td><a class="btn btn-border"id="<%=down %>" type="button"><span><div class="plmy">－</div></span></a></td>
+	<td><input class="count" type="text" value=<%=s[3] %> id="<%=text%>" name="count"></td>
+	<td><a class="btn btn-border"id="<%=up %>" type="button"><span><div class="plmy">＋</div></span></a></td>	
 
 
     </tr>
@@ -145,7 +122,12 @@ if(optList4.isPresent()){
     
     <td><div class="kaimono"><%=s[1] %></div></td>
 	<td><div class="font2">登録済み</div></td>
-	<td><div class="font"><%=s[3] %></div></td>
+	 <% String down = "down"+s[0]; %>
+	 <% String text = "text"+s[0]; %>
+	 <% String up = "up"+s[0]; %>
+	 <td><a class="btn btn-border"id="<%=down %>" type="button"><span><div class="plmy">－</div></span></a></td>
+	<td><input class="count" type="text" value=<%=s[3] %> id="<%=text%>" name="count"></td>
+	<td><a class="btn btn-border"id="<%=up %>" type="button"><span><div class="plmy">＋</div></span></a></td>	
 
 
     </tr>
@@ -153,7 +135,12 @@ if(optList4.isPresent()){
     
   </tbody>
 </table>
+	<button class="button" type="submit"  ><div class="font">変更</div></button>
 </form>
+
+
+
+			
 <a href="http://localhost:8080/R03Team06/kaimono">買い物画面</a>
 <a href="http://localhost:8080/R03Team06/tuika.jsp">商品追加画面</a>
 </body>

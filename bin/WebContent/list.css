@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.list{ 
+	background-color:lightblue;
+	font-size :  60px;
+	width :300px;
+	text-align: center;
+}
+.kaimono{ 
+	background-color:#FFABCE;
+	font-size :  60px;
+	width :300px;
+	text-align: center;
+}
+.button{
+	width: 200px;
+	height: 80px;
+}
+.title{
+	font-size : 80px;
+}
+.font{
+	font-size : 50px;
+}
+.font2{
+	font-size : 40px;
+	
+}
+.count{
+	width: 300px;
+	height: 80px;
+	font-size :  60px;
+	text-align: center;
+}
