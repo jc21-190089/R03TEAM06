@@ -56,7 +56,7 @@
 						// ファイルの読み込み(Data URI Schemeの取得)
 						filereader.readAsDataURL(file);
 					}
-					
+				
 				</script>
 				<label class="upload-label">
 					<div class="font">ファイルを選択</div>

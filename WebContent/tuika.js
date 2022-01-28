@@ -12,7 +12,6 @@ window.onload = function() {
 			text.value--;
 		}
 	});	
-	
 		//ボタンが押されたらカウント増
 	upbutton.addEventListener('click', (event) => {
 		text.value++;
