@@ -38,7 +38,7 @@ public class Tuika extends HttpServlet {
 			String comm = request.getParameter("comm");
 			String count = request.getParameter("count");
 			
-			Part part=request.getPart("file");
+			/*Part part=request.getPart("file");
 			//ファイル名を取得
 			//String filename=part.getSubmittedFileName();//ie対応が不要な場合
 			String filename=Paths.get(part.getSubmittedFileName()).getFileName().toString();
@@ -47,7 +47,7 @@ public class Tuika extends HttpServlet {
 			PreparedStatement at = con.prepareStatement(
 					"insert into file_table values(?)");
 			
-			at.setString(1,"filename");
+			at.setString(1,"filename");*/
 			
 			PreparedStatement st = con.prepareStatement(
 					"insert into comm_table values(null,1,?,?,?,?)");
