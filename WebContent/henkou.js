@@ -7,7 +7,6 @@
   	linkElement.rel = "stylesheet";
   	linkElement.href = "tuikaPC.css";
  
-
   	head.appendChild(linkElement);
 	} else if(window.matchMedia('(max-width:767px)').matches){
   	var head = document.head;

@@ -64,8 +64,7 @@
 				</label>
 				<ul id="ID001"></ul>
 			</div>
-			<%--↑画像終わり↑--%>
-			
+			<%--↑画像終わり↑--%>			
 			<div class="font">
 				<label for="name">名前</label>
 				<input type="text" name="name"	maxlength="10"   class="pcHako mbHako mar">

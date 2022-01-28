@@ -74,7 +74,6 @@ input {
 	border-radius: 2.5em; /* 角の丸み */
 	transition: 0.2s; /* ホバーをなめらかに */
 }
-
 .upload-label input {
 	display: none;
 }
