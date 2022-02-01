@@ -72,7 +72,8 @@ if(optList4.isPresent()){
 	 <td><a class="btn btn-border"id="<%=down %>" type="button"><span><div class="plmy">－</div></span></a></td>
 	<td><input class="count" type="text" value=<%=s[3] %> id="<%=text%>" name="count"></td>
 	<td><a class="btn btn-border"id="<%=up %>" type="button"><span><div class="plmy">＋</div></span></a></td>	
-		<td><button class="button" type="submit" formaction="count" value=<%=s[3] %>,<%=s[3] %> name="countbutton" ><div class="font">変更</div></button></td>
+		<td><button class="button" type="submit" formaction="count"   ><div class="font">変更</div></button></td>
+		<input type="hidden" value=<%=s[0]%> name="comm1" >
 
 
     </tr>
