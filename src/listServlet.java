@@ -61,7 +61,8 @@ public class listServlet extends HttpServlet {
 			System.out.println(userid);
 
 			st20.close();
-
+			
+			session.setAttribute("userid", userid);
 			
 			Class.forName(driverName);
 			Connection connection=DriverManager.getConnection(url,id,pass);
