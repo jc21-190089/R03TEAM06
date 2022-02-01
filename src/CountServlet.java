@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
-
+//¤•i‚ÌŒÂ”‚ğ•ÏX@–¢Š®¬
 @WebServlet("/count")
 
 public class CountServlet extends HttpServlet {
@@ -31,8 +31,10 @@ public class CountServlet extends HttpServlet {
 			DataSource ds = (DataSource)ic.lookup(
 					"java:/comp/env/jdbc/webapp");
 			Connection con = ds.getConnection();
-			String count = request.getParameter("countbutton");
+			String count = request.getParameter("count");
+			String comm = request.getParameter("comm1");
 			System.out.println(count);
+			System.out.println(comm);
 			PreparedStatement st = con.prepareStatement(
 					"update comm_table set count=? where comm_id=?");
 			
