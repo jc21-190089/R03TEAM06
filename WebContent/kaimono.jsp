@@ -21,6 +21,7 @@ if(optList1.isPresent()){
 	list1 = optList1.get();
 }
 %>
+
 <%
 Optional<List<String[]>>optList2 = Optional.ofNullable((List<String[]>)request.getAttribute("list2"));
 List<String[]> list2=new ArrayList<>();
