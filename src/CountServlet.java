@@ -33,19 +33,20 @@ public class CountServlet extends HttpServlet {
 			Connection con = ds.getConnection();
 			String count = request.getParameter("count");
 			String comm = request.getParameter("comm1");
-			System.out.println(count);
-			System.out.println(comm);
+			System.out.println("å¬êî"+count);
+			System.out.println("è§ïiî‘çÜ"+comm);
 			PreparedStatement st = con.prepareStatement(
 					"update comm_table set count=? where comm_id=?");
 			
 			st.setString(1, count);
-			st.setInt(2, 2);
+			st.setString(2, comm);
 			
 			st.executeUpdate();
 			
 			
 			st.close();
 			con.close();
+			response.sendRedirect("http://localhost:8080/R03Team06/list");
 			} catch (Exception e) {
 				out.println("<pre>");
 				e.printStackTrace(out);

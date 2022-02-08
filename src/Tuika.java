@@ -77,7 +77,7 @@ public class Tuika extends HttpServlet {
 			
 			if (line > 0) {
 				
-				out.println("í«â¡ÇµÇ‹ÇµÇΩÅB");
+				response.sendRedirect("http://localhost:8080/R03Team06/tuikasimasita.jsp");
 			}
 			
 			st.close();
