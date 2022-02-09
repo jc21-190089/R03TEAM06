@@ -89,7 +89,6 @@ public class listServlet extends HttpServlet {
 			
 
 			
-			
 			ResultSet result1 = st1.executeQuery();
 			ResultSet result2 = st2.executeQuery();
 			ResultSet result3 = at1.executeQuery();
@@ -148,7 +147,7 @@ public class listServlet extends HttpServlet {
 			request.setAttribute("list4",list4);
 			request.getRequestDispatcher("/list.jsp")
 			.forward(request,response);
-			
+
 			con.close();
 		/*} catch (ClassNotFoundException e ) {
 			e.printStackTrace();
