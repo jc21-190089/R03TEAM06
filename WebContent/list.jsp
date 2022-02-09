@@ -54,8 +54,8 @@ if(optList4.isPresent()){
 		</div>
 		<nav class="nav">
 			<ul class="nav_menu_ul">
-				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/list">リスト画面</a></li>
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/kaimono">買い物画面</a></li>
+				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/tuika.jsp">追加画面</a></li>
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/settei.html">設定画面</a></li>
 			</ul>
 		</nav>
@@ -67,7 +67,7 @@ if(optList4.isPresent()){
     	});
 	</script>
 	<%--↑↑↑↑↑↑↑↑↑ --%>
-
+<div class="content">
 
 <table class="table">
 
@@ -75,7 +75,7 @@ if(optList4.isPresent()){
      
     <div class="title">食品</div>
     <br>
-    
+    <td></td>
     <td><div class="title hyou">名前</div></td>
     <td><div class="title hyou">状態</div></td>
     <td></td>
@@ -124,7 +124,6 @@ if(optList4.isPresent()){
 	
     <div class="title">日用品</div>
     <br>
-    
     <td><div class="title hyou">名前</div></td>
     <td><div class="title hyou">状態</div></td>
     <td></td>
@@ -168,7 +167,7 @@ if(optList4.isPresent()){
     
   </tbody>
 </table>
-
+</div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
