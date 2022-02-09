@@ -51,7 +51,7 @@ if(optList2.isPresent()){
     	});
 	</script>
 	<%--↑↑↑↑↑↑↑↑↑ --%>
-
+<div class="contents">
 <form method="post" action="delete">
 <table class="table">
 
@@ -73,7 +73,8 @@ if(optList2.isPresent()){
     </tr>
     <%} %>
  
-
+</tbody>
+<tbody>
     <th>
    <div class="title rui"> 日用品</div>
    
@@ -93,7 +94,7 @@ if(optList2.isPresent()){
   </tbody>
 </table>
 </form>
-
+</div>
 
 
 
