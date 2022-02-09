@@ -86,6 +86,7 @@ if(optList4.isPresent()){
   <% for (String[] s : list1){ %>
     <tr>
 <form method="post" action="add">    
+	<td><img src="rensyu"style="width: 100px"/></td>
    
     <td><div class="list"><%=s[1] %></div></td>
 	<td><button class="button" type="submit"value=<%=s[0]%> name="comm" ><div class="font">購入する</div></button></td>

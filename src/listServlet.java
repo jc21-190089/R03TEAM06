@@ -68,22 +68,22 @@ public class listServlet extends HttpServlet {
 			Connection connection=DriverManager.getConnection(url,id,pass);
 			PreparedStatement st1 =
 					connection.prepareStatement(
-							"select * from comm_table where sort_id=1 and add_id=1 and user_id=?"
+							"select * from comm_table  where sort_id=1 and add_id=1 and user_id=? order by comm_id asc"
 						);
 			st1.setString(1, userid);
 			PreparedStatement st2 =
 					connection.prepareStatement(
-							"select * from comm_table where sort_id=1 and add_id=2 and user_id=?"
+							"select * from comm_table where sort_id=1 and add_id=2 and user_id=? order by comm_id asc"
 						);
 			st2.setString(1, userid);
 			PreparedStatement at1 =
 					connection.prepareStatement(
-							"select * from comm_table where sort_id=2 and add_id=1 and user_id=?"
+							"select * from comm_table where sort_id=2 and add_id=1 and user_id=? order by comm_id asc"
 						);
 			at1.setString(1, userid);
 			PreparedStatement at2 =
 					connection.prepareStatement(
-							"select * from comm_table where sort_id=2 and add_id=2 and user_id=?"
+							"select * from comm_table where sort_id=2 and add_id=2 and user_id=? order by comm_id asc"
 						);
 			at2.setString(1, userid);
 			
@@ -106,7 +106,6 @@ public class listServlet extends HttpServlet {
 				s[1]=result1.getString("comm_name");
 				s[2]=result1.getString("add_id");
 				s[3]=result1.getString("count");
-				
 
 				list1.add(s);
 			}
