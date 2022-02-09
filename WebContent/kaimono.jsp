@@ -41,7 +41,7 @@ if(optList2.isPresent()){
 			<ul class="nav_menu_ul">
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/list">リスト画面</a></li>
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/tuika.jsp">追加画面</a></li>
-				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/settei.html">設定画面</a></li>
+				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/settei.jsp">設定画面</a></li>
 			</ul>
 		</nav>
 	</div>
