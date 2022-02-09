@@ -17,7 +17,7 @@
 .rui{
 	text-align:center;
 }
-
+/*ハンバーガーメニュー↓*/
 .nav_toggle {
 	display: block;
 	position: fixed;
@@ -35,21 +35,23 @@
 }
 
 .nav_toggle i:nth-child(1) {
-	top: 0;
+	top: 10px;
+	left: 20px;
 }
 
 .nav_toggle i:nth-child(2) {
-	top: 0;
-	bottom:0;
-	margin: auto;
+	top: 35px;
+	left: 20px;
+	
 }
 
 .nav_toggle i:nth-child(3) {
-	bottom: 0;
+	top: 60px;
+	left: 20px;
 }
 
 .nav_toggle.show i:nth-child(1) {
-	transform: translateY(10px) rotate(-43deg);
+	transform: translateY(17px) rotate(-43deg);
 }
 
 .nav_toggle.show i:nth-child(2) {
@@ -57,7 +59,7 @@
 }
 
 .nav_toggle.show i:nth-child(3) {
-	transform: translateY(-10px) rotate(45deg);
+	transform: translateY(-31.5px) rotate(45.2deg);
 }
 
 .nav {

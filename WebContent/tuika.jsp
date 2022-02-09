@@ -20,7 +20,7 @@
 			<ul class="nav_menu_ul">
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/list">リスト画面</a></li>
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/kaimono">買い物画面</a></li>
-				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/settei.html">設定画面</a></li>
+				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/settei.jsp">設定画面</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -67,10 +67,12 @@
 			</div>
 			<%--↑画像終わり↑--%>			
 			<div class="font">
+				<div class="fName">
 				<label for="name">名前</label>
-				<input type="text" name="name"	maxlength="10"   class="pcHako mbHako mar">
+				<input type="text" name="name"	maxlength="10"   class="pcHako mbHako mar nh">
+				</div>
 				<br><br>
-				<input type="text" value="0" id="textbox" name="count"class="pcHako mbHako mar">
+				<input type="text" value="0" id="textbox" name="count"class="pcHako mbHako mar ch">
 				<br> <br>
 				<div class="sentaku">
 					<label><input class="radio" type="radio" name="comm"value="syoku">食材 </label>&emsp; 
