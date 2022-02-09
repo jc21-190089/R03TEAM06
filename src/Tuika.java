@@ -45,8 +45,7 @@ public class Tuika extends HttpServlet {
 			HttpSession session = request.getSession();
 			String userid = (String)session.getAttribute("userid");
 			Part part=request.getPart("file");
-			InputStream inputStream = part.getInputStream();
-			
+			InputStream inputStream = part.getInputStream();			
 			byte[] bt = convertInputStreamToArray(inputStream);
 			ImageBean imageBean = new ImageBean();
 			imageBean.setImage(bt);
