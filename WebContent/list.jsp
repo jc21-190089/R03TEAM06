@@ -44,7 +44,7 @@ if(optList4.isPresent()){
 	list4 = optList4.get();
 }
 %>
-
+<%request.getAttribute("out"); %>
 
 <body>
 	<%--↓ハンバーガ目メニュー↓ --%>
@@ -54,6 +54,7 @@ if(optList4.isPresent()){
 		</div>
 		<nav class="nav">
 			<ul class="nav_menu_ul">
+>>>> master
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/kaimono">買い物画面</a></li>
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/tuika.jsp">追加画面</a></li>
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/settei.html">設定画面</a></li>
@@ -86,9 +87,39 @@ if(optList4.isPresent()){
   <% for (String[] s : list1){ %>
     <tr>
 <form method="post" action="add">    
-	<td><img src="rensyu"></td>
-   
-    <td><div class="list"><%=s[1] %></div></td>
+
+
+
+
+ <script> 
+
+
+function check(){
+
+	if(window.confirm('削除してよろしいですか？')){ // 確認ダイアログを表示
+
+		return true; // 「OK」時は送信を実行
+
+	}
+	else{ // 「キャンセル」時の処理
+
+		//window.alert('キャンセルされました'); // 警告ダイアログを表示
+		return false; // 送信を中止
+
+	}
+
+}
+
+</script>
+	
+	<input type="hidden" value=<%=s[0]%> name="comm1" >
+	<td><button  class="button" type="submit" formaction="gazou"><div class="font">画像</div></button></td>
+
+    <td><button class="list" type="submit" formaction="listsakuzyo" onclick="check()"><%=s[1] %></button></td>
+    
+    
+    
+    
 	<td><button class="button" type="submit"value=<%=s[0]%> name="comm" ><div class="font">購入する</div></button></td>
 	 <% String down = "down"+s[0]; %>
 	 <% String text = "text"+s[0]; %>
@@ -97,7 +128,7 @@ if(optList4.isPresent()){
 	<td><input class="count" type="text" value=<%=s[3] %> id="<%=text%>" name="count"></td>
 	<td><a class="btn btn-border"id="<%=up %>" type="button"><span><div class="plmy">＋</div></span></a></td>	
 		<td><button class="button" type="submit" formaction="count"   ><div class="font">変更</div></button></td>
-		<input type="hidden" value=<%=s[0]%> name="comm1" >
+
 </form>
 
     </tr>
@@ -105,8 +136,37 @@ if(optList4.isPresent()){
  
   <% for (String[] s : list2){ %>
     <tr>
-  <form method="post" action="add">      
-    <td><div class="kaimono"><%=s[1] %></div></td>
+  <form method="post" action="add"> 
+   <script> 
+
+
+function check(){
+
+	if(window.confirm('削除してよろしいですか？')){ // 確認ダイアログを表示
+
+		return true; // 「OK」時は送信を実行
+
+	}
+	else{ // 「キャンセル」時の処理
+
+		//window.alert('キャンセルされました'); // 警告ダイアログを表示
+		return false; // 送信を中止
+
+	}
+
+}
+
+</script>
+  
+  <input type="hidden" value=<%=s[0]%> name="comm1" >
+	<td><button  class="button" type="submit" formaction="gazou"><div class="font">画像</div></button></td>
+	
+	
+	
+    <td><button class="kaimono" type="submit"  formaction="listsakuzyo" onclick="check()"><%=s[1] %></button></td>
+    
+    
+    
 	<td><div class="font2">登録済み</div></td>
 	 <% String down = "down"+s[0]; %>
 	 <% String text = "text"+s[0]; %>
@@ -115,7 +175,6 @@ if(optList4.isPresent()){
 	<td><input class="count" type="text" value=<%=s[3] %> id="<%=text%>" name="count"></td>
 	<td><a class="btn btn-border"id="<%=up %>" type="button"><span><div class="plmy">＋</div></span></a></td>	
        		<td><button class="button" type="submit" formaction="count"   ><div class="font">変更</div></button></td>
-		<input type="hidden" value=<%=s[0]%> name="comm1" >
         </form>
     </tr>
     <%} %>
@@ -124,6 +183,7 @@ if(optList4.isPresent()){
 	
     <div class="title">日用品</div>
     <br>
+>>>>> master
     <td><div class="title hyou">名前</div></td>
     <td><div class="title hyou">状態</div></td>
     <td></td>
@@ -131,8 +191,36 @@ if(optList4.isPresent()){
     
   <% for (String[] s : list3){ %>
     <tr>
-      <form method="post" action="add">    
-    <td><div class="list"><%=s[1] %></div></td>
+      <form method="post" action="add">  
+       <script> 
+
+
+function check(){
+
+	if(window.confirm('削除してよろしいですか？')){ // 確認ダイアログを表示
+
+		return true; // 「OK」時は送信を実行
+
+	}
+	else{ // 「キャンセル」時の処理
+
+		//window.alert('キャンセルされました'); // 警告ダイアログを表示
+		return false; // 送信を中止
+
+	}
+
+}
+
+</script>
+      
+      <input type="hidden" value=<%=s[0]%> name="comm1" >
+	<td><button  class="button" type="submit" formaction="gazou"><div class="font">画像</div></button></td>
+	
+	  
+    <td><button class="list" type="submit"  formaction="listsakuzyo" onclick="check()"><%=s[1] %></button></td>
+    
+    
+    
 	<td><button class="button" type="submit"value=<%=s[0]%> name="comm" ><div class="font">購入する</div></button></td>
 	 <% String down = "down"+s[0]; %>
 	 <% String text = "text"+s[0]; %>
@@ -141,7 +229,7 @@ if(optList4.isPresent()){
 	<td><input class="count" type="text" value=<%=s[3] %> id="<%=text%>" name="count"></td>
 	<td><a class="btn btn-border"id="<%=up %>" type="button"><span><div class="plmy">＋</div></span></a></td>	
 		<td><button class="button" type="submit" formaction="count"   ><div class="font">変更</div></button></td>
-		<input type="hidden" value=<%=s[0]%> name="comm1" >
+
 </form>
 
     </tr>
@@ -150,7 +238,35 @@ if(optList4.isPresent()){
   <% for (String[] s : list4){ %>
     <tr>
       <form method="post" action="add">    
-    <td><div class="kaimono"><%=s[1] %></div></td>
+      
+       <script> 
+
+
+function check(){
+
+	if(window.confirm('削除してよろしいですか？')){ // 確認ダイアログを表示
+
+		return true; // 「OK」時は送信を実行
+
+	}
+	else{ // 「キャンセル」時の処理
+
+		//window.alert('キャンセルされました'); // 警告ダイアログを表示
+		return false; // 送信を中止
+
+	}
+
+}
+
+</script>
+      <input type="hidden" value=<%=s[0]%> name="comm1" >
+	<td><button  class="button" type="submit" formaction="gazou"><div class="font">画像</div></button></td>
+	
+	
+    <td><button class="kaimono" type="submit"  formaction="listsakuzyo" onclick="check()"><%=s[1] %></button></td>
+    
+    
+    
 	<td><div class="font2">登録済み</div></td>
 	 <% String down = "down"+s[0]; %>
 	 <% String text = "text"+s[0]; %>
@@ -159,7 +275,7 @@ if(optList4.isPresent()){
 	<td><input class="count" type="text" value=<%=s[3] %> id="<%=text%>" name="count"></td>
 	<td><a class="btn btn-border"id="<%=up %>" type="button"><span><div class="plmy">＋</div></span></a></td>	
 		<td><button class="button" type="submit" formaction="count"   ><div class="font">変更</div></button></td>
-		<input type="hidden" value=<%=s[0]%> name="comm1" >
+
 </form>
 
     </tr>
