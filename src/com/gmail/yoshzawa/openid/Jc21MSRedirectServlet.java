@@ -80,8 +80,10 @@ public final class Jc21MSRedirectServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 		session.setAttribute("email", email);
 
-		resp.getWriter().println("<H1>Welcome," + email + "</h1>");
-		resp.getWriter().println("<a href= http://localhost:8080/R03Team06/list >Continue</a>");
+		resp.sendRedirect("http://localhost:8080/R03Team06/list");
+		//resp.getWriter().println("<H1>Welcome," + email + "</h1>");
+		//resp.getWriter().println("<a href= http://localhost:8080/R03Team06/list >Continue</a>");
 
 	}
+
 }
