@@ -11,7 +11,12 @@ input[type="radio"] {
 .gamen{
 	font-size: 50px;
 }
-
+.btn--white,
+a.btn--white {
+  color:#000;
+  background:#fff;
+  border: 1px solid #000;
+}
 /*ハンバーガーメニュー↓*/
 .nav_toggle {
 	display: block;

@@ -13,35 +13,29 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
-//���i�̌���ύX�@������
-@WebServlet("/count")
+//���������X�g���珤�i���폜
+@WebServlet("/listsakuzyo")
 
-public class CountServlet extends HttpServlet {
+public class listsakuzyo extends HttpServlet {
 	
 	public void doPost(
 			HttpServletRequest request, HttpServletResponse response
 		) throws ServletException, IOException {
 		response.setContentType("text/html; charset=utf-8");
 		request.setCharacterEncoding("utf-8");
-
 		PrintWriter out = response.getWriter();
-		
 		try {
 			InitialContext ic = new InitialContext();
 			DataSource ds = (DataSource)ic.lookup(
 					"java:/comp/env/jdbc/webapp");
 			Connection con = ds.getConnection();
-			
-			
-			String count = request.getParameter("count");
+
 			String comm = request.getParameter("comm1");
-			System.out.println("��"+count);
 			System.out.println("���i�ԍ�"+comm);
 			PreparedStatement st = con.prepareStatement(
-					"update comm_table set count=? where comm_id=?");
+					"delete from comm_table where comm_id=?");
 			
-			st.setString(1, count);
-			st.setString(2, comm);
+			st.setString(1, comm);
 			
 			st.executeUpdate();
 			
@@ -49,11 +43,12 @@ public class CountServlet extends HttpServlet {
 			st.close();
 			con.close();
 			response.sendRedirect("http://localhost:8080/R03Team06/list");
+
 			} catch (Exception e) {
 				out.println("<pre>");
 				e.printStackTrace(out);
 			}
+		
 	}
-						
-}
 	
+}
