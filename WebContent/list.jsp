@@ -85,7 +85,7 @@ if(optList4.isPresent()){
    
   <% for (String[] s : list1){ %>
     <tr>
-<form method="post" action="add">    
+<form method="post" action="add"　onsubmit="return confim">    
 
 
 
@@ -95,14 +95,14 @@ if(optList4.isPresent()){
 
 function check(){
 
-	if(window.confirm('削除してよろしいですか？')){ // 確認ダイアログを表示
+	if(window.confirm('キャンセルする場合は更新を押してください')){ // 確認ダイアログを表示
 
 		return true; // 「OK」時は送信を実行
 
 	}
 	else{ // 「キャンセル」時の処理
 
-		//window.alert('キャンセルされました'); // 警告ダイアログを表示
+		window.alert('削除されてしまいました'); // 警告ダイアログを表示
 		return false; // 送信を中止
 
 	}
@@ -148,7 +148,7 @@ function check(){
 	}
 	else{ // 「キャンセル」時の処理
 
-		//window.alert('キャンセルされました'); // 警告ダイアログを表示
+		window.alert('キャンセルされました'); // 警告ダイアログを表示
 		return false; // 送信を中止
 
 	}
@@ -202,7 +202,7 @@ function check(){
 	}
 	else{ // 「キャンセル」時の処理
 
-		//window.alert('キャンセルされました'); // 警告ダイアログを表示
+		window.alert('キャンセルされました'); // 警告ダイアログを表示
 		return false; // 送信を中止
 
 	}
@@ -249,7 +249,7 @@ function check(){
 	}
 	else{ // 「キャンセル」時の処理
 
-		//window.alert('キャンセルされました'); // 警告ダイアログを表示
+		window.alert('キャンセルされました'); // 警告ダイアログを表示
 		return false; // 送信を中止
 
 	}
