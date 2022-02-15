@@ -54,7 +54,6 @@ if(optList4.isPresent()){
 		</div>
 		<nav class="nav">
 			<ul class="nav_menu_ul">
->>>> master
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/kaimono">買い物画面</a></li>
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/tuika.jsp">追加画面</a></li>
 				<li class="nav_menu_li"><a href="http://localhost:8080/R03Team06/settei.html">設定画面</a></li>
@@ -183,7 +182,6 @@ function check(){
 	
     <div class="title">日用品</div>
     <br>
->>>>> master
     <td><div class="title hyou">名前</div></td>
     <td><div class="title hyou">状態</div></td>
     <td></td>
